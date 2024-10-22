@@ -189,14 +189,17 @@ class _PieChartState extends State<PieChart> {
   void _updateLabelIntersectAction(String item) {
     setState(() {
       _selectedItem = item;
-      if (_selectedItem == 'shift') {
-        _labelIntersectAction = LabelIntersectAction.shift;
-      }
-      if (_selectedItem == 'none') {
-        _labelIntersectAction = LabelIntersectAction.none;
-      }
-      if (_selectedItem == 'hide') {
-        _labelIntersectAction = LabelIntersectAction.hide;
+      switch (_selectedItem) {
+        case 'shift':
+          _labelIntersectAction = LabelIntersectAction.shift;
+          break;
+        case 'hide':
+          _labelIntersectAction = LabelIntersectAction.hide;
+          break;
+        case 'none':
+        default:
+          _labelIntersectAction =
+              LabelIntersectAction.none; // Optional default case.
       }
     });
   }
