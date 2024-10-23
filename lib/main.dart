@@ -86,7 +86,7 @@ class _PieChartState extends State<PieChart> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: const Text(''),
+        title: const Text('Smart Data labels in Circular Chart'),
         actions: [
           IconButton(
             icon: const Icon(Icons.menu),
